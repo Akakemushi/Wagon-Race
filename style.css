@@ -1,0 +1,124 @@
+.racer-table td {
+  height: 40px;
+  width: 40px;
+}
+
+.racer-table {
+  position: absolute;
+  border: none;
+  top: 77%;
+}
+
+body {
+  height: 100vh;
+}
+/* .racer-table td.active {
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+/* #player1-race td.active {
+  background-image: url("images/Blue\ Truck.png");
+}
+
+#player2-race td.active {
+  background-image: url("images/green\ truck.png");
+} */
+
+#blue-truck {
+  position: absolute;
+  top: 78%;
+  left: 0%;
+  z-index: 6;
+  height: 22%;
+  width: 14%;
+}
+
+#green-truck {
+  position: absolute;
+  top: 64%;
+  left: 0%;
+  z-index: 5;
+  height: 22%;
+  width: 13%;
+}
+
+#outer-box {
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#inner-box {
+  position: relative;
+}
+
+.background {
+  background-image: url("images/Jungle-0.png");
+  background-size: cover;
+  height: calc(75vw / 2.732);
+  min-width: 75vw;
+  position: relative;
+}
+
+.background-1 {
+  position: absolute;
+  background-size: inherit;
+  height: calc(75vw / 2.732);
+  min-width: 75vw;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-image: url("images/Jungle-1.png");
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+.background-2 {
+  position: absolute;
+  background-size: inherit;
+  height: calc(75vw / 2.732);
+  min-width: 75vw;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  background-image: url("images/Jungle-2.png");
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+.background-3 {
+  position: absolute;
+  background-size: inherit;
+  height: calc(75vw / 2.732);
+  min-width: 75vw;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  background-image: url("images/Jungle-3.png");
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+#jungle-1.active{
+  animation: moveBG 8s linear infinite;
+}
+
+#jungle-2.active{
+  animation: moveBG 5s linear infinite;
+}
+
+#jungle-3.active{
+  animation: moveBG 3s linear infinite;
+}
+
+@keyframes moveBG {
+  0%{background-position: 0 0;}
+  100%{background-position: -75vw 0;}
+}
+/* position: absolute;
+display: block;
+background-position: 0px;
+background-image: url(images/buildings3.png);
+background-size: cover;
+background-repeat: repeat-x;
+overflow: hidden; */
