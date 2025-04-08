@@ -115,6 +115,18 @@ body {
   0%{background-position: 0 0;}
   100%{background-position: -75vw 0;}
 }
+
+.instructions-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructions {
+  font-size: 24px;
+}
 /* position: absolute;
 display: block;
 background-position: 0px;
