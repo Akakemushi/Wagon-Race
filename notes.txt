@@ -1,0 +1,53 @@
+the function "performance.now()" is akin to "Date.now()", but is even more precise than the latter, and gets as
+detailed as fractions of a millisecond.  It is preferred when dealing with games and very quick timers.
+For performance.now(), the time is measured from PAGE LOAD, not from Unix Epoch.
+
+someElement.offsetLeft
+This returns the number of pixels between the element’s left edge and the left edge of its "offset parent".
+The offset parent is the nearest ancestor with position: relative, absolute, or fixed. If no such parent exists, it defaults to the body.
+
+someElement.offsetWidth
+This returns the visible width of the element in pixels, including content width, padding and border (but not margin).
+
+someElement.style.left = "100px";
+This is similar, but different from .offsetLeft.  This one can be used to SET the value of how far left the element is. In order to work
+though, it needs to be of a display type that can acutally use it, such as absolute, relative, fixed or (maybe) sticky.  If you don't use
+this to set a value and just type "someElement.style.left"   Then it will return a STRING of whatever it has been set to previously,
+including the "px" part, OR it will just be an empty string if it was never set.
+
+
+FRONT END TIPS, TRICKS, BEST PRACTICES
+
+Tip 1.
+Rule of thumb: If you’re going to absolutely position an element inside something, make that parent position: relative.
+Why?
+It defines the coordinate system for "position: absolute" children. For example:
+
+        .container {
+          position: relative;
+        }
+
+        .child {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+Without "position: relative", your absolutely positioned child will look for the next ancestor with a defined positioning context — which might be <body> (no bueno!).
+
+Tip 2.
+If things get complicated, apply a visible border or outline to key containers while working, such as:
+
+        #inner-box {
+          border: 2px dashed blue;
+        }
+
+        .background {
+          outline: 1px solid red;
+        }
+
+This makes invisible layout boundaries visually obvious, helping you see overflow or misalignments instantly.
+
+Tip 3.
+In the browser DevTools section, in the CSS area, the "computed" tab contains info that you may find helpful, you can see what its "display" setting is, like
+absolute/relative/fixed/etc.  And also the CURRENT calculated distance from the nearest (fixed?) parent element.
