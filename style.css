@@ -42,6 +42,36 @@ body {
   width: 13%;
 }
 
+.truck {
+  position: absolute;
+  left: 0;
+  top: 78%;
+  height: 22%;
+  width: 14%;
+}
+
+.truck-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tire {
+  position: absolute;
+  width: 34%;  /* adjust as needed */
+  height: auto;
+}
+
+.front-tire {
+  bottom: 0;
+  left: 65%;
+}
+
+.back-tire {
+  bottom: 0;
+  left: 5%;
+}
+
 #outer-box {
   height: auto;
   display: flex;
